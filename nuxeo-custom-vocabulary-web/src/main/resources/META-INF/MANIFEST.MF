@@ -1,0 +1,8 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Vendor: com.acme.nuxeo.directories
+Bundle-Version: 1.0.0
+Bundle-Name: nuxeo-custom-vocabulary-web
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.acme.nuxeo.directories.nuxeo-custom-vocabulary-web;singleton=true
