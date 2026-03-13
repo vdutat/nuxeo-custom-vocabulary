@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<component name="com.acme.nuxeo.directories.customvocabulary">
+
+  <require>org.nuxeo.ecm.core.CoreExtensions</require>
+
+  <!-- Custom schema -->
+  <extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+    <schema name="custom_vocabulary" src="directoryschema/custom_vocabulary.xsd"/>
+  </extension>
+
+  <extension point="directories" target="org.nuxeo.ecm.directory.GenericDirectory">
+
+	<!-- Custom templates for custom vocabulary -->
+    <directory name="template-custom-vocabulary" template="true" extends="template-directory">
+      <schema>custom_vocabulary</schema>
+      <idField>id</idField>
+    </directory>
+
+    <!-- Custom vocabulary -->
+    <directory name="custom_vocabulary" extends="template-custom-vocabulary">
+      <table>voc_custom_vocabulary</table>
+      <dataFile>directories/custom_vocabulary.csv</dataFile>
+    </directory>
+
+  </extension>
+
+</component>
