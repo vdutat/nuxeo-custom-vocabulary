@@ -50,6 +50,32 @@ mvn clean install
 nuxeoctl mp-install nuxeo-custom-vocabulary/nuxeo-custom-vocabulary-package/target/nuxeo-custom-vocabulary-*.zip
 ```
 
+## Build and run with Docker and Docker Compose
+
+### Requirements
+
+* access to Nuxeo Nexus for the **LTS 2021/2023/2025 Nuxeo Docker** image
+* maven
+* docker
+* docker-compose
+
+### Build
+
+```
+mvn clean install
+```
+
+### Start Nuxeo instance
+
+* start the **Docker** container:
+```
+docker-compose up
+```
+* stop the **Docker** container:
+```
+docker-compose down -v
+```
+
 ## Support
 
 **These features are not part of the Nuxeo Production platform, they are not supported**
